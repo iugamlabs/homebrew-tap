@@ -5,22 +5,22 @@
 class CodePorter < Formula
   desc "Local code archive importer/exporter (git bundle + zip)"
   homepage "https://github.com/star-plan/code-porter"
-  version "0.5.3"
+  version "0.5.4"
   license "Apache-2.0"
   depends_on "git"
 
   on_macos do
     on_arm do
-      url "https://github.com/star-plan/code-porter/releases/download/v0.5.3/code-porter-macos-arm64"
-      sha256 "8cb6dc5c032979492080fb643725e465f838a04f0a084b22fc08aaf13b542818"
+      url "https://github.com/star-plan/code-porter/releases/download/v0.5.4/code-porter-macos-arm64"
+      sha256 "09f6738bcb1ddcd1b7bf6da61a9bf10f6c17ae87ea0e3318c5ec0d8029736794"
 
       def install
         bin.install "code-porter-macos-arm64" => "code-porter"
       end
     end
     on_intel do
-      url "https://github.com/star-plan/code-porter/releases/download/v0.5.3/code-porter-macos-amd64"
-      sha256 "eedb7ef2ea62eb34950d358a831dd25d391fe407ef6e85ade89e1acbf3c8019f"
+      url "https://github.com/star-plan/code-porter/releases/download/v0.5.4/code-porter-macos-amd64"
+      sha256 "d09fb2d4d3e59c5be0d89fd18af48770b6ee7d375da3d9672b1de32a292b8f39"
 
       def install
         bin.install "code-porter-macos-amd64" => "code-porter"
@@ -30,8 +30,8 @@ class CodePorter < Formula
 
   on_linux do
     on_intel do
-      url "https://github.com/star-plan/code-porter/releases/download/v0.5.3/code-porter-linux-amd64"
-      sha256 "3e015ba2f7e01126da20ca06ff9105a62473be5239db9f5410f9e44757c818d8"
+      url "https://github.com/star-plan/code-porter/releases/download/v0.5.4/code-porter-linux-amd64"
+      sha256 "20f249b1676156d0fb2e3e52aa2b8f4d5d4ab7381230515279673348a897a75c"
 
       def install
         bin.install "code-porter-linux-amd64" => "code-porter"
