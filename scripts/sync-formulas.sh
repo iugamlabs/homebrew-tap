@@ -174,9 +174,113 @@ EOF
   echo "code-porter.rb -> v${version}"
 }
 
+sync_aiquokka() {
+  local repo="star-plan/aiquokka"
+  local tag version dir sums
+  local m_arm m_amd l_arm l_amd
+
+  local a_m_arm="aiquokka-macos-arm64"
+  local a_m_amd="aiquokka-macos-amd64"
+  local a_l_arm="aiquokka-linux-arm64"
+  local a_l_amd="aiquokka-linux-amd64"
+
+  # Latest GitHub Release only.
+  if ! tag="$(gh release view -R "$repo" --json tagName -q .tagName 2>/dev/null)"; then
+    echo "aiquokka: no GitHub Release yet; skip"
+    return 0
+  fi
+
+  version="${tag#v}"
+  dir="$TMP/aiquokka"
+  mkdir -p "$dir"
+
+  # GoReleaser already publishes SHA256SUMS containing hashes for every binary,
+  # so there is no need to download the binaries themselves.
+  if ! gh release download "$tag" \
+      -R "$repo" \
+      -D "$dir" \
+      -p "SHA256SUMS" 2>/dev/null; then
+    echo "aiquokka: release $tag has no SHA256SUMS; skip"
+    return 0
+  fi
+
+  sums="$dir/SHA256SUMS"
+
+  m_arm="$(hash_for "$a_m_arm" "$sums")"
+  m_amd="$(hash_for "$a_m_amd" "$sums")"
+  l_arm="$(hash_for "$a_l_arm" "$sums")"
+  l_amd="$(hash_for "$a_l_amd" "$sums")"
+
+  if [[ -z "$m_arm" || -z "$m_amd" || -z "$l_arm" || -z "$l_amd" ]]; then
+    echo "aiquokka: incomplete macOS/Linux assets on $tag; skip" >&2
+    cat "$sums" >&2
+    return 0
+  fi
+
+  cat > "$ROOT/aiquokka.rb" <<EOF
+# typed: false
+# frozen_string_literal: true
+
+# Homebrew formula for aiquokka — updated by this tap's sync workflow.
+class Aiquokka < Formula
+  desc "Unified subscription quota monitor for Claude, Codex, Cursor, Grok, and more"
+  homepage "https://github.com/star-plan/aiquokka"
+  version "${version}"
+  license "MIT"
+
+  on_macos do
+    on_arm do
+      url "https://github.com/star-plan/aiquokka/releases/download/${tag}/${a_m_arm}"
+      sha256 "${m_arm}"
+
+      def install
+        bin.install "${a_m_arm}" => "aiquokka"
+      end
+    end
+
+    on_intel do
+      url "https://github.com/star-plan/aiquokka/releases/download/${tag}/${a_m_amd}"
+      sha256 "${m_amd}"
+
+      def install
+        bin.install "${a_m_amd}" => "aiquokka"
+      end
+    end
+  end
+
+  on_linux do
+    on_arm do
+      url "https://github.com/star-plan/aiquokka/releases/download/${tag}/${a_l_arm}"
+      sha256 "${l_arm}"
+
+      def install
+        bin.install "${a_l_arm}" => "aiquokka"
+      end
+    end
+
+    on_intel do
+      url "https://github.com/star-plan/aiquokka/releases/download/${tag}/${a_l_amd}"
+      sha256 "${l_amd}"
+
+      def install
+        bin.install "${a_l_amd}" => "aiquokka"
+      end
+    end
+  end
+
+  test do
+    assert_match version.to_s, shell_output("#{bin}/aiquokka --version")
+  end
+end
+EOF
+
+  echo "aiquokka.rb -> v${version}"
+}
+
 main() {
   sync_ship
   sync_code_porter
+  sync_aiquokka
   echo "formula sync complete"
 }
 
