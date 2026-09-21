@@ -5,25 +5,25 @@
 class StarblogPublisher < Formula
   desc "Native AOT desktop application"
   homepage "https://github.com/star-blog/starblog-publisher"
-  version "2.3.4"
+  version "3.0.0-beta.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/star-blog/starblog-publisher/releases/download/v2.3.4/StarBlogPublisher-macOS-arm64-aot-2.3.4.tar.gz"
-      sha256 "8373117c7b6d13cecc524919f2843db884bbe1a0370c8cfb37ec75d04c40f6f5"
+      url "https://github.com/star-blog/starblog-publisher/releases/download/v3.0.0-beta.1/StarBlogPublisher-macOS-arm64-aot-3.0.0-beta.1.tar.gz"
+      sha256 "fd1229a7a508098ac88f8daf01fa99b8f00bb7e0e5dcbd2d18c3209a33e37425"
     end
 
     on_intel do
-      url "https://github.com/star-blog/starblog-publisher/releases/download/v2.3.4/StarBlogPublisher-macOS-aot-2.3.4.tar.gz"
-      sha256 "adca1d8ba71b93366e22d4f38da3689e489931485b670adcf7efe237c8e677aa"
+      url "https://github.com/star-blog/starblog-publisher/releases/download/v3.0.0-beta.1/StarBlogPublisher-macOS-aot-3.0.0-beta.1.tar.gz"
+      sha256 "ff5bdc25a3c039df268bd47fb42e1248df9ed89b6dfbf6f1c925ffffa35b3387"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/star-blog/starblog-publisher/releases/download/v2.3.4/StarBlogPublisher-linux-aot-2.3.4.tar.gz"
-      sha256 "115282b5f0716881185d4c7f47c5ae0fd880673e5d12248bb269da8f44110649"
+      url "https://github.com/star-blog/starblog-publisher/releases/download/v3.0.0-beta.1/StarBlogPublisher-linux-aot-3.0.0-beta.1.tar.gz"
+      sha256 "7bdd0ff88e979a9000bd6b27a9343b14e88570a9788075cef7ba09356b2bc337"
     end
   end
 
