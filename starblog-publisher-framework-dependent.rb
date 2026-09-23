@@ -5,26 +5,26 @@
 class StarblogPublisherFrameworkDependent < Formula
   desc "Framework-dependent desktop application"
   homepage "https://github.com/star-blog/starblog-publisher"
-  version "3.0.0-beta.1"
+  version "3.0.0-beta.2"
   license "MIT"
   depends_on "dotnet@10"
 
   on_macos do
     on_arm do
-      url "https://github.com/star-blog/starblog-publisher/releases/download/v3.0.0-beta.1/StarBlogPublisher-macOS-arm64-framework-dependent-3.0.0-beta.1.tar.gz"
-      sha256 "3a744aa13e79654de24319003e0d72700f4f4e72e0a266ca6bcdc7c373560a75"
+      url "https://github.com/star-blog/starblog-publisher/releases/download/v3.0.0-beta.2/StarBlogPublisher-macOS-arm64-framework-dependent-3.0.0-beta.2.tar.gz"
+      sha256 "ff4267d4eb9f4470f181d5cc9b2f8cb22b8fa30e59dc9658755597a30d413cdb"
     end
 
     on_intel do
-      url "https://github.com/star-blog/starblog-publisher/releases/download/v3.0.0-beta.1/StarBlogPublisher-macOS-framework-dependent-3.0.0-beta.1.tar.gz"
-      sha256 "6a34917dde88271835ca2686164a6e15b66b16e93aeacced2551e2a05322397a"
+      url "https://github.com/star-blog/starblog-publisher/releases/download/v3.0.0-beta.2/StarBlogPublisher-macOS-framework-dependent-3.0.0-beta.2.tar.gz"
+      sha256 "04a5c6707e3bb80b52512277f2b53481be4181a64f78ffe6364de78c10aaaa9a"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/star-blog/starblog-publisher/releases/download/v3.0.0-beta.1/StarBlogPublisher-linux-framework-dependent-3.0.0-beta.1.tar.gz"
-      sha256 "eb0658dc5d9a37c243daf1758666cc832ff8ffed55256c154745399b29ff996a"
+      url "https://github.com/star-blog/starblog-publisher/releases/download/v3.0.0-beta.2/StarBlogPublisher-linux-framework-dependent-3.0.0-beta.2.tar.gz"
+      sha256 "a3d0f60ec21cf61fe04e511a814738999073e7361a2cc1b94597162fdba646da"
     end
   end
 
