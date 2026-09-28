@@ -5,25 +5,25 @@
 class StarblogPublisherSelfContained < Formula
   desc "Self-contained (non-AOT) desktop application"
   homepage "https://github.com/star-blog/starblog-publisher"
-  version "3.0.0-beta.2"
+  version "2.3.4"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/star-blog/starblog-publisher/releases/download/v3.0.0-beta.2/StarBlogPublisher-macOS-arm64-self-contained-3.0.0-beta.2.tar.gz"
-      sha256 "adfa56dc0f2c1427435f7b588f0adfbe8c291c991a0dd351c0c4b28da94b953e"
+      url "https://github.com/star-blog/starblog-publisher/releases/download/v2.3.4/StarBlogPublisher-macOS-arm64-self-contained-2.3.4.tar.gz"
+      sha256 "239e5ee4c6516915a07371fe8af5e4f66bcb2a7c85a9ac5f348ff7453ce7e707"
     end
 
     on_intel do
-      url "https://github.com/star-blog/starblog-publisher/releases/download/v3.0.0-beta.2/StarBlogPublisher-macOS-self-contained-3.0.0-beta.2.tar.gz"
-      sha256 "9b0f640de87bb5b927c17d3a870bee49b01139fdb67277f3104a3da4e11b0651"
+      url "https://github.com/star-blog/starblog-publisher/releases/download/v2.3.4/StarBlogPublisher-macOS-self-contained-2.3.4.tar.gz"
+      sha256 "dafab85ab8aec986859b180bf9e0927f354b917b3359f4713175c4ee5e7bfcd8"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/star-blog/starblog-publisher/releases/download/v3.0.0-beta.2/StarBlogPublisher-linux-self-contained-3.0.0-beta.2.tar.gz"
-      sha256 "c2e53bfd29911358037ec5837c32ff473a72d0e2e08245afa2613a3b4fd038dd"
+      url "https://github.com/star-blog/starblog-publisher/releases/download/v2.3.4/StarBlogPublisher-linux-self-contained-2.3.4.tar.gz"
+      sha256 "053599808be7de575b31f426e12e80057da1b5a0d9aee1c25a40319aceae4632"
     end
   end
 
