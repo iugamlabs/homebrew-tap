@@ -5,13 +5,13 @@
 class Aiquokka < Formula
   desc "Unified subscription quota monitor for Claude, Codex, Cursor, Grok, and more"
   homepage "https://github.com/star-plan/aiquokka"
-  version "0.2.1"
+  version "0.3.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/star-plan/aiquokka/releases/download/v0.2.1/aiquokka-macos-arm64"
-      sha256 "562c201e09d482e74d0eec5e1b03eeddd4ec59065f39958c8271c06bd546c7c7"
+      url "https://github.com/star-plan/aiquokka/releases/download/v0.3.1/aiquokka-macos-arm64"
+      sha256 "583df90adeabf9aafd9f84d522333bdfef759d5195067f51ce2298363108b44e"
 
       def install
         bin.install "aiquokka-macos-arm64" => "aiquokka"
@@ -19,8 +19,8 @@ class Aiquokka < Formula
     end
 
     on_intel do
-      url "https://github.com/star-plan/aiquokka/releases/download/v0.2.1/aiquokka-macos-amd64"
-      sha256 "67b4e671b9872aebee9bd1ea1088b88b9eba4d68fee190eaac01ffd3aabdb816"
+      url "https://github.com/star-plan/aiquokka/releases/download/v0.3.1/aiquokka-macos-amd64"
+      sha256 "b05617a5494227670b15465647dd821916b5bbf1a2d5450cddfef77f0d6c4ac3"
 
       def install
         bin.install "aiquokka-macos-amd64" => "aiquokka"
@@ -30,8 +30,8 @@ class Aiquokka < Formula
 
   on_linux do
     on_arm do
-      url "https://github.com/star-plan/aiquokka/releases/download/v0.2.1/aiquokka-linux-arm64"
-      sha256 "1f81ad59daa21d8871a5e78490919ab3d5fea0f3d56c5a869fb0dc63f0490a49"
+      url "https://github.com/star-plan/aiquokka/releases/download/v0.3.1/aiquokka-linux-arm64"
+      sha256 "1080838fd18f96797fdc69f3a51f9d43a27a3edf66ec2eb1339f4f8d17ccb829"
 
       def install
         bin.install "aiquokka-linux-arm64" => "aiquokka"
@@ -39,8 +39,8 @@ class Aiquokka < Formula
     end
 
     on_intel do
-      url "https://github.com/star-plan/aiquokka/releases/download/v0.2.1/aiquokka-linux-amd64"
-      sha256 "9f8193b1837955237ed02beee0d1e96e5864fdd0c908b8976f268465ab0c7b6f"
+      url "https://github.com/star-plan/aiquokka/releases/download/v0.3.1/aiquokka-linux-amd64"
+      sha256 "89bf453f9ee4585f68bad342c20f7535f06862efc0a72ae3f023253663373956"
 
       def install
         bin.install "aiquokka-linux-amd64" => "aiquokka"
