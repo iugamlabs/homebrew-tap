@@ -1,6 +1,6 @@
-# iugamlabs Homebrew tap
+# iugam Homebrew tap
 
-Homebrew formulas for iugamlabs and related tools.
+Homebrew formulas for iugam and related tools.
 
 ## Install
 
@@ -30,10 +30,10 @@ brew upgrade code-porter
 
 | Formula        | Source                                                              |
 | -------------- | ------------------------------------------------------------------- |
-| `aiquokka`     | [star-plan/aiquokka](https://github.com/star-plan/aiquokka)         |
-| `ship`         | [heyoungai/ship](https://github.com/heyoungai/ship)                 |
-| `code-porter`  | [star-plan/code-porter](https://github.com/star-plan/code-porter)   |
-| `wechat-clone` | [star-plan/wechat-clone](https://github.com/star-plan/wechat-clone) |
+| `aiquokka`     | [iugamlabs/aiquokka](https://github.com/iugamlabs/aiquokka)         |
+| `ship`         | [iugamlabs/ship](https://github.com/iugamlabs/ship)                 |
+| `code-porter`  | [iugamlabs/code-porter](https://github.com/iugamlabs/code-porter)   |
+| `wechat-clone` | [iugamlabs/wechat-clone](https://github.com/iugamlabs/wechat-clone) |
 | `starblog-publisher` | [star-blog/starblog-publisher](https://github.com/star-blog/starblog-publisher) |
 | `starblog-publisher-framework-dependent` | [star-blog/starblog-publisher](https://github.com/star-blog/starblog-publisher) |
 | `starblog-publisher-self-contained` | [star-blog/starblog-publisher](https://github.com/star-blog/starblog-publisher) |
@@ -48,3 +48,11 @@ brew upgrade code-porter
 `starblog-publisher.rb` and its two runtime variants are generated from the
 latest GUI Release and its `SHA256SUMS` asset. The default formula is Native
 AOT; the framework-dependent variant depends on `dotnet@10`.
+
+## 已有用户 / Existing users
+
+无需卸载应用。旧源名称可保留，只更新 Git remote；避免添加重复源。
+
+Keep installed applications and the existing source name; update its Git remote instead of adding a duplicate source.
+
+[迁移说明 / Migration instructions](https://github.com/iugamlabs/.github/blob/master/docs/migration.md)
