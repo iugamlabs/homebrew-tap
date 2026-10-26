@@ -15,7 +15,7 @@ hash_for() {
 }
 
 sync_ship() {
-  local repo="heyoungai/ship"
+  local repo="iugamlabs/ship"
   local tag version dir sums
   local d_arm d_amd l_arm l_amd
   tag="$(gh release view -R "$repo" --json tagName -q .tagName)"
@@ -41,13 +41,13 @@ sync_ship() {
 # Homebrew formula for ship — updated by this tap's sync workflow.
 class Ship < Formula
   desc "Docker image build, push and remote deploy CLI"
-  homepage "https://github.com/heyoungai/ship"
+  homepage "https://github.com/iugamlabs/ship"
   version "${version}"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/heyoungai/ship/releases/download/v${version}/ship-darwin-arm64"
+      url "https://github.com/iugamlabs/ship/releases/download/v${version}/ship-darwin-arm64"
       sha256 "${d_arm}"
 
       def install
@@ -55,7 +55,7 @@ class Ship < Formula
       end
     end
     on_intel do
-      url "https://github.com/heyoungai/ship/releases/download/v${version}/ship-darwin-amd64"
+      url "https://github.com/iugamlabs/ship/releases/download/v${version}/ship-darwin-amd64"
       sha256 "${d_amd}"
 
       def install
@@ -66,7 +66,7 @@ class Ship < Formula
 
   on_linux do
     on_arm do
-      url "https://github.com/heyoungai/ship/releases/download/v${version}/ship-linux-arm64"
+      url "https://github.com/iugamlabs/ship/releases/download/v${version}/ship-linux-arm64"
       sha256 "${l_arm}"
 
       def install
@@ -74,7 +74,7 @@ class Ship < Formula
       end
     end
     on_intel do
-      url "https://github.com/heyoungai/ship/releases/download/v${version}/ship-linux-amd64"
+      url "https://github.com/iugamlabs/ship/releases/download/v${version}/ship-linux-amd64"
       sha256 "${l_amd}"
 
       def install
@@ -92,7 +92,7 @@ EOF
 }
 
 sync_code_porter() {
-  local repo="star-plan/code-porter"
+  local repo="iugamlabs/code-porter"
   local tag version dir sums
   local m_arm m_amd l_amd
   local a_m_arm="code-porter-macos-arm64"
@@ -131,14 +131,14 @@ sync_code_porter() {
 # Homebrew formula for code-porter — updated by this tap's sync workflow.
 class CodePorter < Formula
   desc "Local code archive importer/exporter (git bundle + zip)"
-  homepage "https://github.com/star-plan/code-porter"
+  homepage "https://github.com/iugamlabs/code-porter"
   version "${version}"
   license "Apache-2.0"
   depends_on "git"
 
   on_macos do
     on_arm do
-      url "https://github.com/star-plan/code-porter/releases/download/v${version}/${a_m_arm}"
+      url "https://github.com/iugamlabs/code-porter/releases/download/v${version}/${a_m_arm}"
       sha256 "${m_arm}"
 
       def install
@@ -146,7 +146,7 @@ class CodePorter < Formula
       end
     end
     on_intel do
-      url "https://github.com/star-plan/code-porter/releases/download/v${version}/${a_m_amd}"
+      url "https://github.com/iugamlabs/code-porter/releases/download/v${version}/${a_m_amd}"
       sha256 "${m_amd}"
 
       def install
@@ -157,7 +157,7 @@ class CodePorter < Formula
 
   on_linux do
     on_intel do
-      url "https://github.com/star-plan/code-porter/releases/download/v${version}/${a_l_amd}"
+      url "https://github.com/iugamlabs/code-porter/releases/download/v${version}/${a_l_amd}"
       sha256 "${l_amd}"
 
       def install
@@ -175,7 +175,7 @@ EOF
 }
 
 sync_aiquokka() {
-  local repo="star-plan/aiquokka"
+  local repo="iugamlabs/aiquokka"
   local tag version dir sums
   local m_arm m_amd l_arm l_amd
 
@@ -224,13 +224,13 @@ sync_aiquokka() {
 # Homebrew formula for aiquokka — updated by this tap's sync workflow.
 class Aiquokka < Formula
   desc "Unified subscription quota monitor for Claude, Codex, Cursor, Grok, and more"
-  homepage "https://github.com/star-plan/aiquokka"
+  homepage "https://github.com/iugamlabs/aiquokka"
   version "${version}"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/star-plan/aiquokka/releases/download/${tag}/${a_m_arm}"
+      url "https://github.com/iugamlabs/aiquokka/releases/download/${tag}/${a_m_arm}"
       sha256 "${m_arm}"
 
       def install
@@ -239,7 +239,7 @@ class Aiquokka < Formula
     end
 
     on_intel do
-      url "https://github.com/star-plan/aiquokka/releases/download/${tag}/${a_m_amd}"
+      url "https://github.com/iugamlabs/aiquokka/releases/download/${tag}/${a_m_amd}"
       sha256 "${m_amd}"
 
       def install
@@ -250,7 +250,7 @@ class Aiquokka < Formula
 
   on_linux do
     on_arm do
-      url "https://github.com/star-plan/aiquokka/releases/download/${tag}/${a_l_arm}"
+      url "https://github.com/iugamlabs/aiquokka/releases/download/${tag}/${a_l_arm}"
       sha256 "${l_arm}"
 
       def install
@@ -259,7 +259,7 @@ class Aiquokka < Formula
     end
 
     on_intel do
-      url "https://github.com/star-plan/aiquokka/releases/download/${tag}/${a_l_amd}"
+      url "https://github.com/iugamlabs/aiquokka/releases/download/${tag}/${a_l_amd}"
       sha256 "${l_amd}"
 
       def install
